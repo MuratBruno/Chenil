@@ -12,7 +12,7 @@ services:
     networks:
     - network
   db:
-    image: ${DOCKER_REGISTRY-}chenildb
+    image: ${DOCKER_REGISTRY-}db
     build:
       context: .
       dockerfile: Chenil/Data/Dockerfile
@@ -24,7 +24,7 @@ services:
     networks:
     - network
     volumes:
-    - database:/var/opt/mssql
+    - database:/var/opt/mssql-2
 networks:
     network:
     

@@ -6,16 +6,19 @@ Ce projet a pour but de permettre aux visiteur du site de découvrir le chenil d
 
 ### Sprint 1
 
-Mise en place de l'architecture
+Mise en place de l'architecture :
 - [x] Docker
-- [ ] Migration
-- [ ] Angular
-
-- [ ] Formulaire de contact
-- [ ] Utilisateurs et accès à l'affichage des messages pour l'admin
+- [x] Première migration
+- [x] Angular
+Fonctionnalités :
+- [ ] Formulaire de contact (front)
+- [ ] Enregistrement du contact (back) 
+- [ ] Accueil (front)
+- [ ] Menu (front)
+- [ ] Utilisateurs et accès à l'affichage des messages pour l'admin (front et back)
 
 ## Manuel d'installation
 
 1. Installer docker : https://www.docker.com
-2. Double cliquer sur start.bat (si vous êtes sur windows sinon effectuer les opération "docker-compose build et docker-compose up")
-3. Ouvrez un navigateur à l'adresse https://localhost:10443
+2. Double cliquer sur start.bat si vous êtes sur windows (sinon effectuer les opérations "docker-compose build et docker-compose up")
+3. Ouvrir un navigateur à l'adresse https://localhost:10443

@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
-using Chenil.Models.DonneeDAO;
 
-namespace Chenil.Models.MetierDBO
+namespace Chenil.Models.FrontDTO.Client
 {
-    public class MessageDBO 
+    public class MessageForListDTO
     {
+
         public int Id { get; set; }
         public string Nom { get; set; }
-        public string Telephone { get; set; }
-        public string Mail { get; set; }
-        public string Contenu { get; set; }
         public DateTime Date { get; set; }
     }
 }

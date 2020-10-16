@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Chenil.Models.DonneeDAO;
+using Chenil.Models.FrontDTO;
+using Chenil.Models.FrontDTO.Client;
 using Chenil.Models.MetierDBO;
 
 namespace Chenil.Models.Converter
@@ -34,7 +36,12 @@ namespace Chenil.Models.Converter
         public MessageDBO fromDAOTodBO(MessageDAO dAO)
         {
             MessageDBO MessageDBO = new MessageDBO();
-            MessageDBO.id = dAO.id;
+            MessageDBO.Id = dAO.Id;
+            MessageDBO.Contenu = dAO.Contenu;
+            MessageDBO.Date = dAO.Date;
+            MessageDBO.Mail = dAO.Mail;
+            MessageDBO.Nom = dAO.Nom;
+            MessageDBO.Telephone = dAO.Telephone;
             return MessageDBO;
         }
 
@@ -48,7 +55,11 @@ namespace Chenil.Models.Converter
         public MessageDAO fromDBOTodAO(MessageDBO dBO)
         {
             MessageDAO MessageDAO = new MessageDAO();
-            MessageDAO.id = dBO.id;
+            MessageDAO.Contenu = dBO.Contenu;
+            MessageDAO.Date = dBO.Date;
+            MessageDAO.Mail = dBO.Mail;
+            MessageDAO.Nom = dBO.Nom;
+            MessageDAO.Telephone = dBO.Telephone;
             return MessageDAO;
         }
 
@@ -57,7 +68,21 @@ namespace Chenil.Models.Converter
         public MessageDTO fromDBOTodTO(MessageDBO dBO)
         {
             MessageDTO MessageDTO = new MessageDTO();
-            MessageDTO.id = dBO.id;
+            MessageDTO.Id = dBO.Id;
+            MessageDTO.Contenu = dBO.Contenu;
+            MessageDTO.Date = dBO.Date;
+            MessageDTO.Mail = dBO.Mail;
+            MessageDTO.Nom = dBO.Nom;
+            MessageDTO.Telephone = dBO.Telephone;
+            return MessageDTO;
+        }
+
+        public MessageForListDTO fromDBOTodTOForList(MessageDBO dBO)
+        {
+            MessageForListDTO MessageDTO = new MessageForListDTO();
+            MessageDTO.Id = dBO.Id;
+            MessageDTO.Date = dBO.Date;
+            MessageDTO.Nom = dBO.Nom;
             return MessageDTO;
         }
 
@@ -71,10 +96,14 @@ namespace Chenil.Models.Converter
         public MessageDBO fromDTOTodBO(MessageDTO dTO)
         {
             MessageDBO MessageDBO = new MessageDBO();
-            MessageDBO.id = dTO.id;
+            MessageDBO.Contenu = dTO.Contenu;
+            MessageDBO.Date = dTO.Date;
+            MessageDBO.Mail = dTO.Mail;
+            MessageDBO.Nom = dTO.Nom;
+            MessageDBO.Telephone = dTO.Telephone;
             return MessageDBO;
         }
 
-
+     
     }
 }

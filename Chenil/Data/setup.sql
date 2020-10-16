@@ -10,14 +10,19 @@ END;
 GO
 
 CREATE TABLE [Message] (
-    [id] int NOT NULL IDENTITY,
-    CONSTRAINT [PK_Message] PRIMARY KEY ([id])
+    [Id] int NOT NULL IDENTITY,
+    [Nom] nvarchar(max) NULL,
+    [Telephone] nvarchar(max) NULL,
+    [Mail] nvarchar(max) NULL,
+    [Contenu] nvarchar(max) NULL,
+    [Date] datetime2 NOT NULL,
+    CONSTRAINT [PK_Message] PRIMARY KEY ([Id])
 );
 
 GO
 
 INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-VALUES (N'20201013144236_InitialCreate', N'3.1.8');
+VALUES (N'20201016190836_InitialCreate', N'3.1.9');
 
 GO
 

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chenil", "Chenil\Chenil.csproj", "{323265A9-BA6C-4C7F-AF4F-1BF27ABAC01E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chenil", "Chenil\Chenil.csproj", "{323265A9-BA6C-4C7F-AF4F-1BF27ABAC01E}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{88738523-23DB-4043-807F-62E87201317C}"
 EndProject

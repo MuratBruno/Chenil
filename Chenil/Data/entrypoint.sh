@@ -2,9 +2,8 @@
 
 ls
 
+#Application du script de migration
 
-
-#!/bin/bash
 set -e
 if [ "$1" = '/opt/mssql/bin/sqlservr' ]; then
   # If this is the container's first run, initialize the application database

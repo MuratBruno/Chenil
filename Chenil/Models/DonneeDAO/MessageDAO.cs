@@ -17,7 +17,23 @@ namespace Chenil.Models.DonneeDAO
     public class MessageDAO 
     {
         [Key]
-        public int id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+
+        [Column]
+        public string Nom { get; set; }
+
+        [Column]
+        public string Telephone { get; set; }
+
+        [Column]
+        public string Mail { get; set; }
+
+        [Column]
+        public string Contenu { get; set; }
+
+        [Column]
+        public DateTime Date { get; set; }
 
     }
 }

@@ -7,14 +7,20 @@ using Chenil.Models.MetierDBO;
 namespace Chenil.Models.DonneeDAO
 {
     /// <summary>
-    /// Classe du Message tel qu'il sera utiisée par la partie front.
-    /// D'autre DTO représentant le Message peuvent exister selon l'affichage voulu, exemple : MessageDetailsDTO.
+
     /// </summary>
     public class MessageDTO 
     {
-        public int id { get; set; }
+        public int Id { get; set; }
+        public string Nom { get; set; }
 
-        //Nombre d'achat effectué par le Message, ce nombre ne servant que la partie front, il n'apparait que dans le DTO
-        public int nbAchat { get; set; }
+        public string Telephone { get; set; }
+
+        public string Mail { get; set; }
+
+
+        public string Contenu { get; set; }
+
+        public DateTime Date { get; set; }
     }
 }
