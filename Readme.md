@@ -7,12 +7,12 @@ Ce projet a pour but de permettre aux visiteur du site de découvrir le chenil d
 ### Sprint 1
 
 Mise en place de l'architecture
-[x] Docker
-[ ] Migration
-[ ] Angular
+- [x] Docker
+- [ ] Migration
+- [ ] Angular
 
-[ ] Formulaire de contact
-[ ] Utilisateurs et accès à l'affichage des messages pour l'admin
+- [ ] Formulaire de contact
+- [ ] Utilisateurs et accès à l'affichage des messages pour l'admin
 
 ## Manuel d'installation
 
