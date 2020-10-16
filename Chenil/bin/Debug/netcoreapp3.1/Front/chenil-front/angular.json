@@ -123,10 +123,6 @@
           }
         }
       }
-    }
-  },
-  "defaultProject": "chenil-front",
-  "cli": {
-    "analytics": false
-  }
+    }},
+  "defaultProject": "chenil-front"
 }

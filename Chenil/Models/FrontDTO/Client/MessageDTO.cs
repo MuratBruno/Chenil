@@ -13,14 +13,9 @@ namespace Chenil.Models.DonneeDAO
     {
         public int Id { get; set; }
         public string Nom { get; set; }
-
         public string Telephone { get; set; }
-
         public string Mail { get; set; }
-
-
         public string Contenu { get; set; }
-
         public DateTime Date { get; set; }
     }
 }
