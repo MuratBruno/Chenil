@@ -6,11 +6,11 @@ Ce projet a pour but de permettre aux visiteur du site de découvrir le chenil d
 
 ### Sprint 1
 
-Mise en place de l'architecture :
+- Mise en place de l'architecture :
 - [x] Docker
 - [x] Première migration
 - [x] Angular
-Fonctionnalités :
+- Fonctionnalités :
 - [ ] Formulaire de contact (front)
 - [ ] Enregistrement du contact (back) 
 - [ ] Accueil (front)
