@@ -1,0 +1,41 @@
+networks:
+  network: {}
+services:
+  chenil:
+    build:
+      context: C:\ProjetProg\Chenil
+      dockerfile: Chenil/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: chenil
+    networks:
+      network: {}
+    ports:
+    - published: 8080
+      target: 80
+    - target: 80
+    - published: 10443
+      target: 443
+    - target: 443
+    volumes:
+    - C:\Users\Bruno Murat\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Bruno Murat\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  db:
+    build:
+      context: C:\ProjetProg\Chenil
+      dockerfile: Chenil/Data/Dockerfile
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: CHANGE_THIS_P4ssW0rd!
+    image: chenildb
+    networks:
+      network: {}
+    ports:
+    - published: 1435
+      target: 1433
+    volumes:
+    - database:/var/opt/mssql:rw
+version: '3.4'
+volumes:
+  database: {}
