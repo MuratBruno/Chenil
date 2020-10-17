@@ -12,10 +12,12 @@ Mise en place de l'architecture :
 - [x] Angular
 Fonctionnalités :
 - [ ] Formulaire de contact (front)
+- [ ] Rendre l'application responsive
 - [ ] Enregistrement du contact (back) 
 - [ ] Accueil (front)
 - [ ] Menu (front)
 - [ ] Utilisateurs et accès à l'affichage des messages pour l'admin (front et back)
+- [ ] logs
 
 ## Manuel d'installation
 
