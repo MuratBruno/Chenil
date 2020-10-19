@@ -35,4 +35,4 @@ Ce projet a pour but de permettre aux visiteur du site de découvrir le chenil d
 
 1. Installer docker : https://www.docker.com
 2. Double cliquer sur start.bat si vous êtes sur windows (sinon effectuer les opérations "docker-compose build et docker-compose up")
-3. Ouvrir un navigateur à l'adresse https://localhost:10443/swagger/index.html
+3. Ouvrir un navigateur à l'adresse http://localhost:4202
