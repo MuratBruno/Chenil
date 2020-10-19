@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Chenil.Models.FrontDTO.Client
 {
+    /// <summary>
+    /// Classe d'affichage réduit des messages lorsqu'ils sont en grand nombre dans une liste.
+    /// </summary>
     public class MessageForListDTO
     {
 

@@ -23,7 +23,7 @@ namespace Chenil.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=127.0.0.1,1435;Database=master;User=sa;Password=CHANGE_THIS_P4ssW0rd!;");
+            optionsBuilder.UseSqlServer(@"Server=db;Database=master;User=sa;Password=CHANGE_THIS_P4ssW0rd!;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

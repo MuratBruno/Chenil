@@ -6,19 +6,33 @@ Ce projet a pour but de permettre aux visiteur du site de découvrir le chenil d
 
 ### Sprint 1
 
-Mise en place de l'architecture :
+- Mise en place de l'architecture :
 - [x] Docker
 - [x] Première migration
 - [x] Angular
-Fonctionnalités :
-- [ ] Formulaire de contact (front)
-- [ ] Enregistrement du contact (back) 
+- Fonctionnalités :
+- [x] Formulaire de contact (front)
+- [x] Enregistrement du message (back) 
+
+### Sprint 2
+
+- [ ] Rendre l'application responsive (installation de ionic)
 - [ ] Accueil (front)
 - [ ] Menu (front)
-- [ ] Utilisateurs et accès à l'affichage des messages pour l'admin (front et back)
+- [ ] Utilisateurs 
+- [ ] Authorisations
+- [ ] Accès à l'affichage des messages pour l'admin (front et back)
+- [ ] Certificat
+
+### Sprint 3
+
+- [ ] TestsUnitaires
+- [ ] Sonarqube
+- [ ] Logs
+- [ ] Exceptions
 
 ## Manuel d'installation
 
 1. Installer docker : https://www.docker.com
 2. Double cliquer sur start.bat si vous êtes sur windows (sinon effectuer les opérations "docker-compose build et docker-compose up")
-3. Ouvrir un navigateur à l'adresse https://localhost:10443
+3. Ouvrir un navigateur à l'adresse https://localhost:10443/swagger/index.html

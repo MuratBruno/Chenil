@@ -1,13 +1,23 @@
 version: '3.4'
 
 services:
+  front:
+    image: ${DOCKER_REGISTRY-}front
+    build:
+      context: .
+      dockerfile: Chenil/Front/chenil-front/Dockerfile
+      args:
+        ANGULAR_ENVIRONMENT: production
+    ports:
+    - "4202:4200"
+    networks:
+    - network
   chenil:
     image: ${DOCKER_REGISTRY-}chenil
     build:
       context: .
       dockerfile: Chenil/Dockerfile
     ports:
-    - "8080:80"
     - "10443:443"
     networks:
     - network
