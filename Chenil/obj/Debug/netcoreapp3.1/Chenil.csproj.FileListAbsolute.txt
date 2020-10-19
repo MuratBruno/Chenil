@@ -60,3 +60,16 @@ C:\ProjetProg\Chenil\Chenil\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
 C:\ProjetProg\Chenil\Chenil\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\ProjetProg\Chenil\Chenil\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\ProjetProg\Chenil\Chenil\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\ProjetProg\Chenil\Chenil\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\ProjetProg\Chenil\Chenil\bin\Debug\netcoreapp3.1\Front\chenil-front\angular.json
+C:\ProjetProg\Chenil\Chenil\bin\Debug\netcoreapp3.1\Front\chenil-front\e2e\tsconfig.json
+C:\ProjetProg\Chenil\Chenil\bin\Debug\netcoreapp3.1\Front\chenil-front\package-lock.json
+C:\ProjetProg\Chenil\Chenil\bin\Debug\netcoreapp3.1\Front\chenil-front\package.json
+C:\ProjetProg\Chenil\Chenil\bin\Debug\netcoreapp3.1\Front\chenil-front\src\app\package.json
+C:\ProjetProg\Chenil\Chenil\bin\Debug\netcoreapp3.1\Front\chenil-front\tsconfig.app.json
+C:\ProjetProg\Chenil\Chenil\bin\Debug\netcoreapp3.1\Front\chenil-front\tsconfig.json
+C:\ProjetProg\Chenil\Chenil\bin\Debug\netcoreapp3.1\Front\chenil-front\tsconfig.spec.json
+C:\ProjetProg\Chenil\Chenil\bin\Debug\netcoreapp3.1\Front\chenil-front\tslint.json
+C:\ProjetProg\Chenil\Chenil\obj\Debug\netcoreapp3.1\Chenil.csproj.CoreCompileInputs.cache
+C:\ProjetProg\Chenil\Chenil\obj\Debug\netcoreapp3.1\Chenil.MvcApplicationPartsAssemblyInfo.cs
+C:\ProjetProg\Chenil\Chenil\obj\Debug\netcoreapp3.1\Chenil.MvcApplicationPartsAssemblyInfo.cache

@@ -1,0 +1,42 @@
+Formulaire de contact
+
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+
+    Nom:
+    <input id="nom" type="text" formControlName="nom" required>
+
+    <div *ngIf="!nomValid">
+        Nom obligatoire
+    </div>
+
+    Mail:
+    <input type="text" formControlName="mail" required>
+
+    <div *ngIf="!mailValid">
+        Mail obligatoire, renseigner une adresse au format adéquat
+    </div>
+
+    Téléphone:
+
+    <input type="text" formControlName="telephone" required>
+    <div *ngIf="!telephoneValid">
+        Téléphone obligatoire
+    </div>
+
+    Contenu:
+
+    <div class="col-sm-10">
+        <input type="text" rows="5" formControlName="contenu" required>
+    </div>
+
+
+    <div *ngIf="!contenuValid">
+        Contenu obligatoire
+    </div>
+
+    <div>
+        <button type="submit" [disabled]="!messageForm.valid">Submit</button>
+    </div>
+    {{result}}
+
+</form>

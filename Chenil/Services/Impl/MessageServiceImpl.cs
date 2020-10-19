@@ -28,9 +28,19 @@ namespace Chenil.Services.Impl
         {
             return new MessageServiceImpl(MessageRepositoryImpl.getRepositoryImpl());
         }
+
+        /// <summary>
+        /// Ajout de la date et l'heure actuelle puis enregistrement en bdd.
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         public MessageDTO Create(MessageDTO entity)
         {
-            MessageDAO MessageDAO = converter.fromDTOTodAO(entity);
+            MessageDBO MessageDBO = converter.fromDTOTodBO(entity);
+            MessageDBO.Date = DateTime.Now;
+
+            MessageDAO MessageDAO = converter.fromDBOTodAO(MessageDBO);
+
             MessageDAO resultMessageDAO = MessageRepository.Create(MessageDAO).Result;
             MessageDTO resultMessageDTO = converter.fromDAOTodTO(resultMessageDAO);
             return resultMessageDTO;

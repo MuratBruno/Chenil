@@ -6,6 +6,9 @@ using Chenil.Models.DonneeDAO;
 
 namespace Chenil.Models.MetierDBO
 {
+    /// <summary>
+    /// Classe du message tel qu'il sera traité par les services.
+    /// </summary>
     public class MessageDBO 
     {
         public int Id { get; set; }

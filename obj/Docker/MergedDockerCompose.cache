@@ -22,13 +22,10 @@ services:
     - C:\Users\Bruno Murat\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
     - C:\Users\Bruno Murat\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
   db:
-    build:
-      context: C:\ProjetProg\Chenil
-      dockerfile: Chenil/Data/Dockerfile
     environment:
       ACCEPT_EULA: "Y"
       SA_PASSWORD: CHANGE_THIS_P4ssW0rd!
-    image: chenildb
+    image: mcr.microsoft.com/mssql/server
     networks:
       network: {}
     ports:
