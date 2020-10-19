@@ -22,6 +22,7 @@ namespace Chenil
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -36,6 +37,16 @@ namespace Chenil
             services.AddScoped<IMessageRepository, MessageRepositoryImpl>();
             services.AddScoped<IMessageService, MessageServiceImpl>();
             services.AddControllersWithViews();
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                 builder =>
+                                 {
+                                     builder.WithOrigins("http://localhost:4202").AllowAnyHeader().AllowAnyMethod();
+                                 });
+            });
+
+
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen((SwaggerGenOptions c) =>
             {
@@ -52,6 +63,7 @@ namespace Chenil
             }
 
             app.UseHttpsRedirection();
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseRouting();
 
@@ -69,6 +81,13 @@ namespace Chenil
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=message}/{id?}");
+            });
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=message}");
             });
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();

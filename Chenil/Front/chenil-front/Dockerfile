@@ -33,5 +33,7 @@ RUN echo $(ls -1)
 
 RUN echo $(ls -1)
 
+EXPOSE 4202:4200
+
 # start app
-CMD ng serve
+CMD ng serve --host 0.0.0.0

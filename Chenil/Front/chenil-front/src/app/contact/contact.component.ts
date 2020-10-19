@@ -66,6 +66,13 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit():void{
+    //initiallisation du message
+    this.message.contenu=this.messageForm.get('contenu')?.value;
+    this.message.mail=this.messageForm.get('mail')?.value;
+    this.message.telephone=this.messageForm.get('telephone')?.value;
+    this.message.nom=this.messageForm.get('nom')?.value;
+
+
     //appel au service
     this.messageService.sendMessage(this.message).subscribe(()=>{
       this.result='Message envoyé avec succès!';

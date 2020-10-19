@@ -5,6 +5,6 @@ export class Config {
   backChenilUrl: string;
 
   constructor(){
-    this.backChenilUrl='https://localhost:8080';
+    this.backChenilUrl='https://localhost:10443/api/';
   }
 }

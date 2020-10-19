@@ -7,7 +7,8 @@ using Chenil.Models.MetierDBO;
 namespace Chenil.Models.DonneeDAO
 {
     /// <summary>
-
+    /// Classe front détaillé d'un message de demande de contact
+    /// tel qu'il transitera dans les requêtes http
     /// </summary>
     public class MessageDTO 
     {

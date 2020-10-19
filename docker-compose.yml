@@ -6,6 +6,8 @@ services:
     build:
       context: .
       dockerfile: Chenil/Front/chenil-front/Dockerfile
+      args:
+        ANGULAR_ENVIRONMENT: production
     ports:
     - "4202:4200"
     networks:

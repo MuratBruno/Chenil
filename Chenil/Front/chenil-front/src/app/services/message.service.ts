@@ -7,7 +7,7 @@ import { catchError } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class MessageService {
-
+  targetControl='message/';
 
   constructor(private http:HttpClient,private config:Config) {
 
@@ -15,7 +15,7 @@ export class MessageService {
 
   /** POST: add a new hero to the database */
   sendMessage(message: Message): Observable<Message> {
-  return this.http.post<Message>(this.config.backChenilUrl, message)
+  return this.http.post<Message>(this.config.backChenilUrl+this.targetControl, message)
     .pipe(
       catchError(this.handleError('sendMessage', message))
     );
