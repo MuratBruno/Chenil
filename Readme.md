@@ -16,6 +16,8 @@ Ce projet a pour but de permettre aux visiteur du site de découvrir le chenil d
 
 ### Sprint 2
 
+- [ ] Captcha
+- [ ] Anglais
 - [ ] Rendre l'application responsive (installation de ionic)
 - [ ] Accueil (front)
 - [ ] Menu (front)
