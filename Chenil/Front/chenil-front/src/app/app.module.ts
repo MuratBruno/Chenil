@@ -7,11 +7,13 @@ import { ContactComponent } from './contact/contact.component';
 import { RouterModule } from '@angular/router';
 import { MessageService } from './services/message.service';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AccueilComponent } from './accueil/accueil.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactComponent
+    ContactComponent,
+    AccueilComponent
   ],
   imports: [
     BrowserModule,

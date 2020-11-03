@@ -1,42 +1,55 @@
-Formulaire de contact
+<form id="contact" [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+    <fieldset>
+        <legend>Vos coordonnées</legend>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Nom</span>
+            </div>
+            <input id="nom" type="text" formControlName="nom" required class="form-control" placeholder="Nom" aria-label="Nom" aria-describedby="basic-addon1">
+        </div>
+        <div *ngIf="!nomValid" class="alert alert-danger">
+            Nom obligatoire
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">@</span>
+            </div>
+            <input type="email" id="email" name="email" formControlName="mail" required class="form-control" placeholder="Mail" aria-label="Mail" aria-describedby="basic-addon1">
+           
+        </div>
+        <div *ngIf="!mailValid" class="alert alert-danger">
+            Mail obligatoire, renseigner une adresse au format adéquat
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Tél.</span>
+            </div>
+            <input type="tel" id="tel" name="tel" formControlName="telephone" required class="form-control" placeholder="Téléphone" aria-label="Tel" aria-describedby="basic-addon1">
+        </div>
+        <div *ngIf="!telephoneValid" class="alert alert-danger">
+            Téléphone obligatoire
+        </div>
 
-<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+    </fieldset>
 
-    Nom:
-    <input id="nom" type="text" formControlName="nom" required>
-
-    <div *ngIf="!nomValid">
-        Nom obligatoire
-    </div>
-
-    Mail:
-    <input type="text" formControlName="mail" required>
-
-    <div *ngIf="!mailValid">
-        Mail obligatoire, renseigner une adresse au format adéquat
-    </div>
-
-    Téléphone:
-
-    <input type="text" formControlName="telephone" required>
-    <div *ngIf="!telephoneValid">
-        Téléphone obligatoire
-    </div>
-
-    Contenu:
-
-    <div class="col-sm-10">
-        <input type="text" rows="5" formControlName="contenu" required>
-    </div>
-
-
-    <div *ngIf="!contenuValid">
-        Contenu obligatoire
-    </div>
-
-    <div>
-        <button type="submit" [disabled]="!messageForm.valid">Submit</button>
-    </div>
-    {{result}}
-
+    <fieldset>
+        <legend>Votre message</legend>
+        <input type="text" id="objet" name="objet" formControlName="objet" required class="form-control nouvelleligne" aria-describedby="objet" placeholder="Objet">
+        <div *ngIf="!objetValid" class="alert alert-danger">
+            Objet obligatoire
+        </div>
+        <div class="input-group nouvelleligne">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Message</span>
+            </div>
+            <textarea id="message" name="message" cols="30" rows="8" formControlName="contenu" required class="form-control" aria-label="Message"></textarea>
+        </div>
+        <div *ngIf="!contenuValid" class="alert alert-danger">
+            Contenu obligatoire
+        </div>
+    </fieldset>
+    <div style="text-align:left;" class="nouvelleligne">
+        <button type="button" class="btn btn-success" type="submit" [disabled]="!messageForm.valid" id="envoi" name="envoi" value="Envoyer">Envoyer</button>
+        </div>
+    <div *ngIf="messageEnvoye" [className]="success ? 'alert alert-success' : 'alert alert-danger'">{{result}}</div>
 </form>

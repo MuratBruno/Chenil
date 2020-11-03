@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
 import { Config } from '../config/config';
 import { Message } from '../model/message';
 import { catchError } from 'rxjs/operators';
@@ -26,7 +26,8 @@ export class MessageService {
     return (error: any): Observable<T> => {
       console.error(error); 
       // Let the app keep running by returning an empty result.
-      return of(result as T);
+      return throwError(
+        'Une erreur est survenue durant l\'envoi du message veuillez reessayer plus tard');
     };
   }
 }

@@ -42,7 +42,7 @@ namespace Chenil
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                  builder =>
                                  {
-                                     builder.WithOrigins("http://localhost:4202").AllowAnyHeader().AllowAnyMethod();
+                                     builder.WithOrigins("http://localhost:4202", "http://localhost:4202").AllowAnyHeader().AllowAnyMethod();
                                  });
             });
 
