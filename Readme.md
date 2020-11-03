@@ -16,11 +16,10 @@ Ce projet a pour but de permettre aux visiteur du site de découvrir le chenil d
 
 ### Sprint 2
 
-- [ ] Captcha
-- [ ] Anglais
-- [ ] Rendre l'application responsive (installation de ionic)
-- [ ] Accueil (front)
-- [ ] Menu (front)
+- [ ] Version anglaise
+- [x] Rendre l'application responsive (installation de boostrap)
+- [x] Accueil (front)
+- [x] Menu (front)
 - [ ] Utilisateurs 
 - [ ] Authorisations
 - [ ] Accès à l'affichage des messages pour l'admin (front et back)
@@ -28,13 +27,13 @@ Ce projet a pour but de permettre aux visiteur du site de découvrir le chenil d
 
 ### Sprint 3
 
-- [ ] TestsUnitaires
+- [ ] Tests Unitaires
 - [ ] Sonarqube
-- [ ] Logs
+- [ ] Logs (front et back)
 - [ ] Exceptions
 
 ## Manuel d'installation
 
 1. Installer docker : https://www.docker.com
-2. Double cliquer sur start.bat si vous êtes sur windows (sinon effectuer les opérations "docker-compose build et docker-compose up")
+2. Double cliquer sur start.bat si vous êtes sur windows ou sur start.sh si vous êtes sous UNIX.
 3. Ouvrir un navigateur à l'adresse http://localhost:4202

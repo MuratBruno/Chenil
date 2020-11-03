@@ -30,6 +30,9 @@ namespace Chenil.Models.DonneeDAO
         public string Mail { get; set; }
 
         [Column]
+        public string Objet { get; set; }
+
+        [Column]
         public string Contenu { get; set; }
 
         [Column]

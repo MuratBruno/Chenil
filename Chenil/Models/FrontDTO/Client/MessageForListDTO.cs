@@ -14,6 +14,8 @@ namespace Chenil.Models.FrontDTO.Client
 
         public int Id { get; set; }
         public string Nom { get; set; }
+
+        public string Objet { get; set; }
         public DateTime Date { get; set; }
     }
 }
