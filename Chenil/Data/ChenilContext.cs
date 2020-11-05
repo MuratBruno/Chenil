@@ -5,30 +5,33 @@ using System.Linq;
 using System.Threading.Tasks;
 using Chenil.Models;
 using Chenil.Models.DonneeDAO;
+using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
+using Chenil.Models.Users;
+using IdentityServer4.EntityFramework.Options;
+using Microsoft.Extensions.Options;
 
 namespace Chenil.Data
 {
-    public class ChenilContext: DbContext
+    public class ChenilContext : ApiAuthorizationDbContext<ApplicationUser>
     {
-        public ChenilContext()
+        public ChenilContext(DbContextOptions options,
+            IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
         {
 
         }
 
         //Pour les tests unitaires
-        public static ChenilContext getContext()
+       /*public static ChenilContext getContext()
         {
-            return new ChenilContext();
-        }
+            return 
+        }*/
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=db;Database=master;User=sa;Password=CHANGE_THIS_P4ssW0rd!;");
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-        }
+    
         //entities
         public DbSet<MessageDAO> Messages { get; set; }
     }

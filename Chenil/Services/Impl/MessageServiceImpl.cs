@@ -24,10 +24,10 @@ namespace Chenil.Services.Impl
         }
 
         //Pour les tests unitaires
-        public static MessageServiceImpl getMessageServiceImpl()
+        /*public static MessageServiceImpl getMessageServiceImpl()
         {
             return new MessageServiceImpl(MessageRepositoryImpl.getRepositoryImpl());
-        }
+        }*/
 
         /// <summary>
         /// Ajout de la date et l'heure actuelle puis enregistrement en bdd.

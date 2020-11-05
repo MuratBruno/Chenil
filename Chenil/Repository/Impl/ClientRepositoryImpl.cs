@@ -19,11 +19,11 @@ namespace Chenil.Repository.Impl
         }
 
         //Pour les tests unitaires
-        public static MessageRepositoryImpl getRepositoryImpl()
+        /*public static MessageRepositoryImpl getRepositoryImpl()
         {
             return new MessageRepositoryImpl(ChenilContext.getContext());
         }
-
+        */
         public async Task<MessageDAO> Create(MessageDAO MessageDAO)
         {
             MessageContext.Add(MessageDAO);

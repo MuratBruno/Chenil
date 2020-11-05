@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Chenil.Data;
+using Chenil.Models.Users;
 using Chenil.Repository;
 using Chenil.Repository.Impl;
 using Chenil.Services;
 using Chenil.Services.Impl;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -42,7 +44,7 @@ namespace Chenil
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                  builder =>
                                  {
-                                     builder.WithOrigins("http://localhost:4202", "http://localhost:4202").AllowAnyHeader().AllowAnyMethod();
+                                     builder.WithOrigins("http://localhost:4202", "http://localhost:4200").AllowAnyHeader().AllowAnyMethod();
                                  });
             });
 
@@ -52,6 +54,14 @@ namespace Chenil
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TestMappingEFCore", Version = "v1" });
             });
+
+            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+         .AddEntityFrameworkStores<ChenilContext>();
+
+            services.AddIdentityServer()
+                .AddApiAuthorization<ApplicationUser, ChenilContext>();
+            services.AddAuthentication()
+                .AddIdentityServerJwt();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -67,6 +77,8 @@ namespace Chenil
 
             app.UseRouting();
 
+            app.UseAuthentication();
+            app.UseIdentityServer();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

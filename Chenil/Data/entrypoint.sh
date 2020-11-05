@@ -15,6 +15,9 @@ if [ "$1" = '/opt/mssql/bin/sqlservr' ]; then
       #run the setup script to create the DB and the schema in the DB
       /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "CHANGE_THIS_P4ssW0rd!" -d master -i "Chenil/Data/setup.sql"
 
+      #Affichage d'un messsage signalant la fin de l'installation
+      echo "Installation du site Chenil terminee, veuiller ouvrir un navigateur web a l'adresse : http://localhost:4202/accueil"
+
       # Note that the container has been initialized so future starts won't wipe changes to the data
       touch /tmp/app-initialized
     }

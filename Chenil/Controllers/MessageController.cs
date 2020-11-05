@@ -31,10 +31,10 @@ namespace Chenil.Controllers
 
         //Pour les tests unitaires
         //TODO : si on ne peut pas utiliser l'injection de dépendance.
-        public static MessageController getMessageController()
+       /* public static MessageController getMessageController()
         {
             return new MessageController(MessageServiceImpl.getMessageServiceImpl());
-        }
+        }*/
 
 
         [HttpGet]

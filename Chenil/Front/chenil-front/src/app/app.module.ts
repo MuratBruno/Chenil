@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { MessageService } from './services/message.service';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccueilComponent } from './accueil/accueil.component';
+import { ApiAuthorizationModule } from './api-authorization/api-authorization.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AccueilComponent } from './accueil/accueil.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ApiAuthorizationModule
   ],
   providers: [FormBuilder ,MessageService],
   bootstrap: [AppComponent]
