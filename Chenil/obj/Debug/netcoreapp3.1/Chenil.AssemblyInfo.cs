@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("3a516720-566f-4e1e-b246-9e1a38d2fcc5")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Chenil")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]

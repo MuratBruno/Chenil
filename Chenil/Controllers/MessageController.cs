@@ -13,6 +13,7 @@ using Chenil.Repository;
 using Chenil.Repository.Impl;
 using Chenil.Services;
 using Chenil.Services.Impl;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Chenil.Controllers
 {
@@ -38,6 +39,7 @@ namespace Chenil.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = "Administrator, PowerUser")]
         [Route("{id}")]
         public ActionResult<MessageDTO> GetById(int id)
         {
@@ -51,7 +53,7 @@ namespace Chenil.Controllers
             }
             catch (Exception e)
             {
-                throw new Exception("Erreur lors de l'enregistrement");
+                throw new Exception("Erreur lors de l'enregistrement : "+e.Message);
             }
             return MessageDTO;
         }

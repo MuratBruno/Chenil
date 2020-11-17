@@ -6,6 +6,8 @@ export class ChenilSettings implements UserManagerSettings{
     readonly silent_redirect_uri?: any;
     client_id?: string;
     readonly redirect_uri?: string;
+    readonly response_type?: string;
+
 
     public constructor(){
         this.popup_redirect_uri='https://localhost:4200/authentication/login-callback';
@@ -13,5 +15,6 @@ export class ChenilSettings implements UserManagerSettings{
         this.silent_redirect_uri='https://localhost:4200/authentication/login-callback';
         this.client_id= 'Developpement';
         this.redirect_uri='https://localhost:4200/authentication/login-callback';
+        this.response_type='id_token token';
     }
 }

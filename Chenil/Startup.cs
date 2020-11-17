@@ -52,14 +52,14 @@ namespace Chenil
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen((SwaggerGenOptions c) =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TestMappingEFCore", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Chenil", Version = "v1" });
             });
 
             services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
          .AddEntityFrameworkStores<ChenilContext>();
 
             services.AddIdentityServer()
-                .AddApiAuthorization<ApplicationUser, ChenilContext>();
+                .AddApiAuthorization<ApplicationUser, ChenilContext>().AddInMemoryClients(Configuration.GetSection("IdentityServer:Clients"));
             services.AddAuthentication()
                 .AddIdentityServerJwt();
         }
@@ -108,7 +108,7 @@ namespace Chenil
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "TestMappingEFCore");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Chenil");
             });
         }
     }
